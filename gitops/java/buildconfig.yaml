@@ -1,0 +1,45 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: petclinic
+    app.kubernetes.io/component: petclinic
+    app.kubernetes.io/instance: petclinic
+    app.kubernetes.io/name: java
+    app.kubernetes.io/part-of: argocd-java-demo
+    app.openshift.io/runtime: java
+    app.openshift.io/runtime-version: "8"
+  name: petclinic
+  namespace: argocd-java-demo
+spec:
+  failedBuildsHistoryLimit: 5
+  output:
+    to:
+      kind: ImageStreamTag
+      name: petclinic:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: /
+    git:
+      uri: https://github.com/pittar/spring-petclinic
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: java:8
+        namespace: openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - generic:
+      secretReference:
+        name: petclinic-generic-webhook-secret
+    type: Generic
+  - github:
+      secretReference:
+        name: petclinic-github-webhook-secret
+    type: GitHub
+  - type: ConfigChange

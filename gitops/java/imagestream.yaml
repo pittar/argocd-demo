@@ -1,0 +1,16 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: petclinic
+    app.kubernetes.io/component: petclinic
+    app.kubernetes.io/instance: petclinic
+    app.kubernetes.io/name: java
+    app.kubernetes.io/part-of: argocd-java-demo
+    app.openshift.io/runtime: java
+    app.openshift.io/runtime-version: "8"
+  name: petclinic
+  namespace: argocd-java-demo
+spec:
+  lookupPolicy:
+    local: false
