@@ -13,6 +13,7 @@ metadata:
   namespace: argocd-java-demo
 spec:
   failedBuildsHistoryLimit: 5
+  nodeSelector: null
   output:
     to:
       kind: ImageStreamTag
@@ -43,3 +44,4 @@ spec:
         name: petclinic-github-webhook-secret
     type: GitHub
   - type: ConfigChange
+status: {}
