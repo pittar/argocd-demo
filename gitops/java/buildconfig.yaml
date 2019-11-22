@@ -44,4 +44,5 @@ spec:
         name: petclinic-github-webhook-secret
     type: GitHub
   - type: ConfigChange
-status: {}
+status:
+  lastVersion: 1
