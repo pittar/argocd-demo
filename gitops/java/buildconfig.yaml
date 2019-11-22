@@ -13,7 +13,7 @@ metadata:
   namespace: argocd-java-demo
 spec:
   failedBuildsHistoryLimit: 5
-  nodeSelector: null
+  nodeSelector: {}
   output:
     to:
       kind: ImageStreamTag
