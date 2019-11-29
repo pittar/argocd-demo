@@ -17,7 +17,7 @@ spec:
       prune: true
       selfHeal: true
   ignoreDifferences:
-  - group: apps
+  - group: build.openshift.io
     kind: BuildConfig
     jsonPointers:
     - /status/lastVersion
