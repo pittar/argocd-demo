@@ -20,7 +20,7 @@ oc -n argocd patch deployment argocd-server -p $PATCH
 oc -n argocd create route edge argocd-server --service=argocd-server --port=http --insecure-policy=Redirect
 
 # Create a new Project
-oc create -f projects/java-project.yaml
+oc create -f gitops/projects/java-project.yaml
 
 # Create an Application
-oc create -f applications/java-application.yaml
+oc create -f gitops/applications/java-application.yaml
