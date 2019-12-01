@@ -21,6 +21,10 @@ spec:
     kind: BuildConfig
     jsonPointers:
     - /status/lastVersion
+  - group: route.openshift.io
+    kind: Route
+    jsonPointers:
+    - /status/ingress/conditions
   sync:
     comparedTo:
       destination:
