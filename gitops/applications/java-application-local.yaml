@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: java-project
   source:
-    path: gitops/java
+    path: gitops/java/overlays/local
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
   syncPolicy:
@@ -25,10 +25,6 @@ spec:
     kind: Route
     jsonPointers:
     - /status/ingress
-  - group: route.openshift.io
-    kind: Route
-    jsonPointers:
-    - /spec/host
   sync:
     comparedTo:
       destination:

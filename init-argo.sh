@@ -23,4 +23,4 @@ oc -n argocd create route edge argocd-server --service=argocd-server --port=http
 oc create -f gitops/projects/java-project.yaml
 
 # Create an Application
-oc create -f gitops/applications/java-application.yaml
+oc create -f gitops/applications/java-application-local.yaml

@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: java-demo
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: java-project
+  source:
+    path: gitops/java/overlays/local
+    repoURL: https://github.com/pittar/argocd-demo.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences:
+  - group: build.openshift.io
+    kind: BuildConfig
+    jsonPointers:
+    - /status/lastVersion
+  - group: route.openshift.io
+    kind: Route
+    jsonPointers:
+    - /status/ingress
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        path: gitops/java
+        repoURL: https://github.com/pittar/argocd-demo.git
+        targetRevision: HEAD

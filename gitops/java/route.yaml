@@ -12,6 +12,7 @@ metadata:
   name: petclinic
   namespace: argocd-java-demo
 spec:
+  host: argocd-java-demo.apps-crc.testing
   port:
     targetPort: 8080-tcp
   subdomain: ""

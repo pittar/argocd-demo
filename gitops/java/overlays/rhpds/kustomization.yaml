@@ -1,0 +1,8 @@
+commonLabels:
+  org: redhat
+commonAnnotations:
+  note: Hello, I am on rhpds
+bases:
+- ../../java
+patchesStrategicMerge:
+- route.yaml
