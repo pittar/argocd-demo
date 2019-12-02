@@ -3,6 +3,6 @@ commonLabels:
 commonAnnotations:
   note: Hello, I am on rhpds
 bases:
-- ../../java
+- ../java
 patchesStrategicMerge:
 - route.yaml
