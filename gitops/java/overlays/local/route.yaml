@@ -2,6 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: petclinic
+  namespace: argocd-java-demo
 spec:
   host: argocd-java-demo.apps-crc.testing
 status:
