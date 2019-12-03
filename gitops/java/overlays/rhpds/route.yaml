@@ -4,11 +4,11 @@ metadata:
   name: petclinic
   namespace: argocd-java-demo
 spec:
-  host: argocd-server-argocd.apps.cluster-ottawa-6687.ottawa-6687.example.opentlc.com
+  host: argocd-java-demo.apps.cluster-ottawa-6687.ottawa-6687.example.opentlc.com
 status:
   ingress:
   - conditions:
-    host: argocd-server-argocd.apps.cluster-ottawa-6687.ottawa-6687.example.opentlc.com
+    host: argocd-java-demo.apps.cluster-ottawa-6687.ottawa-6687.example.opentlc.com
     routerCanonicalHostname: apps.cluster-ottawa-6687.ottawa-6687.example.opentlc.com
     routerName: default
     wildcardPolicy: None
