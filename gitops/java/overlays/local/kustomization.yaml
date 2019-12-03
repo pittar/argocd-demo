@@ -3,6 +3,6 @@ commonLabels:
 commonAnnotations:
   note: Hello, I am on crc
 bases:
-- ../../java
+- ../../base
 patchesStrategicMerge:
 - route.yaml
