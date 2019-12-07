@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: cicd
+  project: java-project
   source:
     path: gitops/cicd/base
     repoURL: https://github.com/pittar/argocd-demo.git
