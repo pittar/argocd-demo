@@ -1,0 +1,9 @@
+resources:
+- jenkins-namespace.yaml
+- jenkins-cm.yaml
+- jenkins-sa.yaml
+- jenkins-svc.yaml
+- jenkins-jnlp.yaml
+- jenkins-pvc.yaml
+- jenkins-dc.yaml
+- jenkins-route.yaml
