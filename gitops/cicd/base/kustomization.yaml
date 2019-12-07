@@ -2,6 +2,7 @@ resources:
 - cicd-namespace.yaml
 - jenkins-cm.yaml
 - jenkins-sa.yaml
+- jenkins-rolebinding.yaml
 - jenkins-svc.yaml
 - jenkins-jnlp.yaml
 - jenkins-pvc.yaml
