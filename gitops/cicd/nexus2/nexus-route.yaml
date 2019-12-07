@@ -1,6 +1,9 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
+  annotations:
+    haproxy.router.openshift.io/timeout: 4m
+    template.openshift.io/expose-uri: http://{.spec.host}{.spec.path}
   labels:
     app: nexus
     template: nexus2-persistent-template
@@ -18,6 +21,7 @@ spec:
   wildcardPolicy: None
 status:
   ingress:
+  - conditions:
     host: nexus-cicd2.apps-crc.testing
     routerCanonicalHostname: apps-crc.testing
     routerName: default
