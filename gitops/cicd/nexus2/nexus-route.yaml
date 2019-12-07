@@ -10,7 +10,7 @@ metadata:
   name: nexus
   namespace: cicd
 spec:
-  host: nexus-cicd2.apps-crc.testing
+  host: nexus-cicd.apps-crc.testing
   port:
     targetPort: 8081-tcp
   subdomain: ""
@@ -22,7 +22,7 @@ spec:
 status:
   ingress:
   - conditions:
-    host: nexus-cicd2.apps-crc.testing
+    host: nexus-cicd.apps-crc.testing
     routerCanonicalHostname: apps-crc.testing
     routerName: default
     wildcardPolicy: None
