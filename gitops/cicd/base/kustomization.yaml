@@ -1,5 +1,5 @@
 resources:
-- jenkins-namespace.yaml
+- cicd-namespace.yaml
 - jenkins-cm.yaml
 - jenkins-sa.yaml
 - jenkins-svc.yaml
