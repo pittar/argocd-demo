@@ -21,6 +21,7 @@ spec:
   template:
     metadata:
       annotations:
+        app.openshift.io/connects-to: postgresql-sonarqube
         openshift.io/container.sonarqube.image.entrypoint: '["./bin/run.sh"]'
       creationTimestamp: null
       labels:
