@@ -1,0 +1,39 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+    openshift.io/image.dockerRepositoryCheck: "2019-12-07T16:23:09Z"
+  creationTimestamp: "2019-12-07T16:23:08Z"
+  generation: 2
+  labels:
+    app: nexus
+    template: nexus2-persistent-template
+  name: nexus
+  namespace: cicd2
+  resourceVersion: "89944"
+  selfLink: /apis/image.openshift.io/v1/namespaces/cicd2/imagestreams/nexus
+  uid: dafe48fc-190d-11ea-80ef-0a580a800031
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: docker.io/sonatype/nexus:2.14.5
+    generation: 2
+    importPolicy: {}
+    name: 2.14.5
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/cicd2/nexus
+  publicDockerImageRepository: default-route-openshift-image-registry.apps-crc.testing/cicd2/nexus
+  tags:
+  - items:
+    - created: "2019-12-07T16:23:09Z"
+      dockerImageReference: docker.io/sonatype/nexus@sha256:e4391c1ba05bf047a2153ea76691c4b1c66560e394d1d84354505cd9a0c30907
+      generation: 2
+      image: sha256:e4391c1ba05bf047a2153ea76691c4b1c66560e394d1d84354505cd9a0c30907
+    tag: 2.14.5
