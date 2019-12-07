@@ -1,18 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
-    openshift.io/generated-by: OpenShiftNewApp
-    openshift.io/host.generated: "true"
-  creationTimestamp: "2019-12-07T16:23:08Z"
   labels:
     app: nexus
     template: nexus2-persistent-template
   name: nexus
-  namespace: cicd2
-  resourceVersion: "89942"
-  selfLink: /apis/route.openshift.io/v1/namespaces/cicd2/routes/nexus
-  uid: db0564f3-190d-11ea-80ef-0a580a800031
+  namespace: cicd
 spec:
   host: nexus-cicd2.apps-crc.testing
   port:
@@ -25,10 +18,6 @@ spec:
   wildcardPolicy: None
 status:
   ingress:
-  - conditions:
-    - lastTransitionTime: "2019-12-07T16:23:09Z"
-      status: "True"
-      type: Admitted
     host: nexus-cicd2.apps-crc.testing
     routerCanonicalHostname: apps-crc.testing
     routerName: default
