@@ -32,6 +32,9 @@ spec:
         kind: ImageStreamTag
         name: java:8
         namespace: openshift
+      env:
+      - name: MAVEN_MIRROR_URL
+        value: http://nexus:8081/content/groups/public
     type: Source
   successfulBuildsHistoryLimit: 5
   triggers:
