@@ -34,7 +34,7 @@ spec:
         namespace: openshift
       env:
       - name: MAVEN_MIRROR_URL
-        value: http://nexus:8081/content/groups/public
+        value: http://nexus.cicd.svc.cluster.local:8081/content/groups/public
     type: Source
   successfulBuildsHistoryLimit: 5
   triggers:
