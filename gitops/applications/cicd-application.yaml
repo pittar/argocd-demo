@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cicd-project
   source:
-    path: gitops/cicd
+    path: gitops/cicd/project
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
   syncPolicy:
@@ -27,6 +27,6 @@ spec:
         namespace: argocd
         server: https://kubernetes.default.svc
       source:
-        path: gitops/cicd
+        path: gitops/cicd/project
         repoURL: https://github.com/pittar/argocd-demo.git
         targetRevision: HEAD
