@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: java-project
   source:
-    path: gitops/java
+    path: gitops/java/petclinic
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
   syncPolicy:
@@ -31,6 +31,6 @@ spec:
         namespace: argocd
         server: https://kubernetes.default.svc
       source:
-        path: gitops/java
+        path: gitops/java/petclinic
         repoURL: https://github.com/pittar/argocd-demo.git
         targetRevision: HEAD
