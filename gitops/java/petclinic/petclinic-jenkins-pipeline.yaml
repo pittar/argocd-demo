@@ -24,7 +24,7 @@ spec:
       - name: APP_NAME
         value: petclinic
       - name: GIT_SOURCE_URL
-        value: https://github.com/pittar/spring-petlinic.git
+        value: https://github.com/pittar/spring-petclinic.git
       - name: GIT_SOURCE_REF
         value: master
       jenkinsfilePath: Jenkinsfile
