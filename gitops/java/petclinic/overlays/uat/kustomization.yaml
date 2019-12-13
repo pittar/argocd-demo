@@ -5,3 +5,5 @@ bases:
 namespace: petclinic-uat
 resources:
 - namespace.yaml
+patchesStrategicMerge:
+- route.yaml
