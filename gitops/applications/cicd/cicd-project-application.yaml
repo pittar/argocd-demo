@@ -9,26 +9,19 @@ spec:
     server: https://kubernetes.default.svc
   project: cicd-project
   source:
-    path: gitops/cicd
+    path: gitops/cicd/project
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
-    directory:
-      recurse: true
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-  - group: route.openshift.io
-    kind: Route
-    jsonPointers:
-    - /status/ingress
   sync:
     comparedTo:
       destination:
         namespace: argocd
         server: https://kubernetes.default.svc
       source:
-        path: gitops/cicd
+        path: gitops/cicd/project
         repoURL: https://github.com/pittar/argocd-demo.git
         targetRevision: HEAD

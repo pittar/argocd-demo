@@ -27,6 +27,6 @@ oc create -f https://raw.githubusercontent.com/argoproj-labs/argocd-operator/mas
 wait 5000
 
 echo "Create an Argo CD instance."
-oc create -f https://raw.githubusercontent.com/argoproj-labs/argocd-operator/master/examples/argocd-minimal.yaml
+oc create -f https://raw.githubusercontent.com/pittar/argocd-demo/master/deploy/argocd.yaml
 
 echo "Enjoy!"
