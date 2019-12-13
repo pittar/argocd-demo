@@ -3,8 +3,8 @@ kind: BuildConfig
 metadata:
   labels:
     app: app-build
-    name: backend
-  name: backend
+    name: petclinic
+  name: petclinic-jenkins-pipeline
   namespace: cicd
 spec:
   failedBuildsHistoryLimit: 5
@@ -16,15 +16,15 @@ spec:
   source:
     git:
       ref: master
-      uri: https://github.com/pittar/springboot-backend.git
+      uri: https://github.com/pittar/spring-petclinic.git
     type: Git
   strategy:
     jenkinsPipelineStrategy:
       env:
       - name: APP_NAME
-        value: backend
+        value: petclinic
       - name: GIT_SOURCE_URL
-        value: https://github.com/pittar/springboot-backend.git
+        value: https://github.com/pittar/spring-petlinic.git
       - name: GIT_SOURCE_REF
         value: master
       jenkinsfilePath: Jenkinsfile

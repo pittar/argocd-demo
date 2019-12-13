@@ -3,7 +3,7 @@ kind: BuildConfig
 metadata:
   labels:
     app: app-build
-  name: backend-build
+  name: petclinic-s2i-build
   namespace: cicd
 spec:
   failedBuildsHistoryLimit: 5
@@ -11,7 +11,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: backend:latest
+      name: petclinic:latest
   postCommit: {}
   resources: {}
   runPolicy: Serial
