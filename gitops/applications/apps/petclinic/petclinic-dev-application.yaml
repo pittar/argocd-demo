@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: java-project
   source:
-    path: gitops/java/petclinic
+    path: gitops/java/petclinic/overlays/dev
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
     # kustomize specific config
@@ -36,6 +36,6 @@ spec:
         namespace: argocd
         server: https://kubernetes.default.svc
       source:
-        path: gitops/java/petclinic
+        path: gitops/java/petclinic/overlays/dev
         repoURL: https://github.com/pittar/argocd-demo.git
         targetRevision: HEAD

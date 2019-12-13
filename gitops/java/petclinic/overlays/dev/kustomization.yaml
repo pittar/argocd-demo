@@ -1,0 +1,4 @@
+bases:
+- ../../bases
+patchesStrategicMerge:
+- namespace.yaml
