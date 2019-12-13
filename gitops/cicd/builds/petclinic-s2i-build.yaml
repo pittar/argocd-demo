@@ -3,6 +3,7 @@ kind: BuildConfig
 metadata:
   labels:
     app: app-build
+    name: petclinic
   name: petclinic-s2i-build
   namespace: cicd
 spec:
