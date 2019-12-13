@@ -10,7 +10,6 @@ metadata:
     app.openshift.io/runtime: java
     app.openshift.io/runtime-version: "8"
   name: petclinic
-  namespace: petclinic
 spec:
   host: app-petclinic-dev.apps-crc.testing
   port:
