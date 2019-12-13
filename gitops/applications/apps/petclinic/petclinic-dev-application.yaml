@@ -11,12 +11,9 @@ spec:
     server: https://kubernetes.default.svc
   project: java-project
   source:
-    path: gitops/java/petclinic/bases
+    path: gitops/java/petclinic/overlays/dev
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
-    # kustomize specific config
-    kustomize:
-      nameSuffix: -dev
   syncPolicy:
     automated:
       prune: true
@@ -36,6 +33,6 @@ spec:
         namespace: argocd
         server: https://kubernetes.default.svc
       source:
-        path: gitops/java/petclinic/bases
+        path: gitops/java/petclinic/overlays/dev
         repoURL: https://github.com/pittar/argocd-demo.git
         targetRevision: HEAD
