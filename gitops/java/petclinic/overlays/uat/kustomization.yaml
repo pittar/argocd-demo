@@ -1,3 +1,4 @@
+namespace: petclinic-uat
 bases:
 - ../../bases
 patchesStrategicMerge:
