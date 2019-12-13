@@ -16,7 +16,6 @@ spec:
     targetRevision: HEAD
     # kustomize specific config
     kustomize:
-      # Optional image name prefix
       namePrefix: dev-
   syncPolicy:
     automated:
