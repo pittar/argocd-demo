@@ -16,7 +16,7 @@ spec:
     targetRevision: HEAD
     # kustomize specific config
     kustomize:
-      namePrefix: dev-
+      nameSuffix: -dev
   syncPolicy:
     automated:
       prune: true
