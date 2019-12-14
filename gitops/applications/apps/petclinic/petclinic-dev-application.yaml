@@ -14,9 +14,6 @@ spec:
     path: gitops/java/petclinic/overlays/dev
     repoURL: https://github.com/pittar/argocd-demo.git
     targetRevision: HEAD
-    # kustomize specific config
-    kustomize:
-      nameSuffix: -dev
   syncPolicy:
     automated:
       prune: false
