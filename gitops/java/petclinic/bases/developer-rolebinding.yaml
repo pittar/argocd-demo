@@ -1,15 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: admin
+  name: developer-edit
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: admin
+  name: edit
 subjects:
 - apiGroup: rbac.authorization.k8s.io
-  kind: User
-  name: admin
-- kind: ServiceAccount
-  name: jenkins
-  namespace: cicd
+  kind: Group
+  name: developer
