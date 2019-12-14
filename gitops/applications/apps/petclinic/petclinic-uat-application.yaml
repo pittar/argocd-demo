@@ -19,8 +19,8 @@ spec:
       nameSuffix: -uat
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: false
+      selfHeal: false
   ignoreDifferences:
   - group: build.openshift.io
     kind: BuildConfig
