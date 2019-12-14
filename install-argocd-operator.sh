@@ -5,10 +5,10 @@ oc new-project argocd
 
 echo "Create Argo CD service account, role, and role binding."
 oc create -f https://raw.githubusercontent.com/argoproj-labs/argocd-operator/master/deploy/service_account.yaml
-oc create -f https://raw.githubusercontent.com/argoproj-labs/argocd-operator/master/deploy/role.yaml
+oc create -f https://raw.githubusercontent.com/pittar/argocd-demo/master/deploy/role.yaml
 oc create -f https://raw.githubusercontent.com/argoproj-labs/argocd-operator/master/deploy/role_binding.yaml
 # Until I figure out how configure the argocd role to be able to create namespacdes...
-oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:argocd:argocd-application-controller
+# oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:argocd:argocd-application-controller
 sleep 3
 
 echo "Add the Argo CD CRDs."
