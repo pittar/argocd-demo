@@ -1,0 +1,14 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: petclinic
+spec:
+  triggers:
+  - imageChangeParams:
+      containerNames:
+      - petclinic
+      from:
+        kind: ImageStreamTag
+        name: petclinic:dev
+        namespace: cicd
+  
