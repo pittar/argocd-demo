@@ -13,7 +13,7 @@ spec:
   source:
     path: gitops/cicd/builds
     repoURL: https://github.com/pittar/argocd-demo.git
-    targetRevision: HEAD
+    targetRevision: remote
   syncPolicy:
     automated:
       prune: true
@@ -26,4 +26,4 @@ spec:
       source:
         path: gitops/cicd/builds
         repoURL: https://github.com/pittar/argocd-demo.git
-        targetRevision: HEAD
+        targetRevision: remote
