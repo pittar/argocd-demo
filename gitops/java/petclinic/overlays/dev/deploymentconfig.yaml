@@ -16,4 +16,5 @@ spec:
         kind: ImageStreamTag
         name: petclinic:dev
         namespace: cicd
+    type: ImageChange
   
