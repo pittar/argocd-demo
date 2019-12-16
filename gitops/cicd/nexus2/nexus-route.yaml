@@ -6,7 +6,6 @@ metadata:
     template.openshift.io/expose-uri: http://{.spec.host}{.spec.path}
   labels:
     app: nexus
-    template: nexus2-persistent-template
   name: nexus
   namespace: cicd
 spec:
@@ -22,7 +21,7 @@ spec:
 status:
   ingress:
   - conditions:
-    host: nexus-cicd.apps.cluster-ottawa-4ef5.ottawa-4ef5.example.opentlc.com
-    routerCanonicalHostname: apps.cluster-ottawa-4ef5.ottawa-4ef5.example.opentlc.com
+    host: nexus-cicd.apps.example.com
+    routerCanonicalHostname: apps.example.com
     routerName: default
     wildcardPolicy: None

@@ -18,6 +18,11 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  ignoreDifferences:
+  - group: build.openshift.io
+    kind: BuildConfig
+    jsonPointers:
+    - /status/lastVersion
   sync:
     comparedTo:
       destination:

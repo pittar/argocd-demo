@@ -1,7 +1,0 @@
-resources:
-- deploymentconfig.yaml
-- service.yaml
-- imagestream.yaml
-- route.yaml
-- namespace.yaml
-- buildconfig.yaml
