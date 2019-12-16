@@ -3,6 +3,11 @@ kind: DeploymentConfig
 metadata:
   name: petclinic
 spec:
+  template:
+    spec:
+      containers:
+      - imagePullPolicy: Always
+        name: petclinic
   triggers:
   - imageChangeParams:
       containerNames:
